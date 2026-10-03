@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../shared/design-tokens.css">
+  <link rel="stylesheet" href="../shared/components.css">
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+  <div class="panel-container">
+    <header class="panel-header">
+      <div class="logo">
+        <span class="logo-brand">iviG</span>
+        <span class="logo-sub">TechSEO</span>
+      </div>
+      <div class="header-actions">
+        <button id="btn-rerun" class="btn-icon" title="Re-run audit"></button>
+        <button id="btn-copy" class="btn-icon" title="Copy summary"></button>
+        <button id="btn-pdf" class="btn-icon" title="Download PDF report"></button>
+      </div>
+    </header>
+
+    <div class="panel-content">
+      <div id="initial-state" class="panel-initial">
+        <div class="empty-state">
+          <div class="empty-icon" id="initial-icon"></div>
+          <div class="empty-text">No audit data yet</div>
+          <div class="empty-sub">Run an audit from the popup or press Ctrl+Shift+S</div>
+        </div>
+        <div class="panel-action">
+          <button id="btn-run" class="btn btn-primary">Run SEO Audit</button>
+        </div>
+      </div>
+
+      <div id="loading-state" class="panel-loading" style="display:none;">
+        <div class="skeleton" style="height:80px;margin:16px;border-radius:12px;"></div>
+        <div class="skeleton" style="height:60px;margin:0 16px 8px;border-radius:12px;"></div>
+        <div class="skeleton" style="height:60px;margin:0 16px 8px;border-radius:12px;"></div>
+        <div class="skeleton" style="height:60px;margin:0 16px 8px;border-radius:12px;"></div>
+        <div class="skeleton" style="height:60px;margin:0 16px 8px;border-radius:12px;"></div>
+        <div class="skeleton" style="height:60px;margin:0 16px 8px;border-radius:12px;"></div>
+        <div class="skeleton" style="height:60px;margin:0 16px 8px;border-radius:12px;"></div>
+      </div>
+
+      <div id="results-state" style="display:none;">
+        <div id="score-overview" class="score-overview"></div>
+        <div id="audit-meta" class="audit-meta"></div>
+        <div id="comparison-banner" class="comparison-banner" style="display:none;"></div>
+        <div id="modules-container" class="modules-container"></div>
+      </div>
+
+      <div id="error-state" class="panel-error" style="display:none;">
+        <div class="empty-state">
+          <div class="empty-icon error" id="error-icon"></div>
+          <div class="empty-text" id="error-text">Something went wrong</div>
+          <div class="empty-sub" id="error-detail"></div>
+        </div>
+        <div class="panel-action">
+          <button id="btn-retry" class="btn btn-secondary">Try Again</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="panel-footer">
+      <span>by <strong>iviG</strong></span>
+      <span class="separator">|</span>
+      <a href="https://ivig.dev/?ref=techseo-inspector" target="_blank">Free SEO Audit</a>
+      <span class="separator">|</span>
+      <a href="https://ivig.dev/seo-guides/?ref=techseo-inspector" target="_blank">SEO Tips</a>
+    </footer>
+  </div>
+
+  <script src="../lib/jspdf.umd.min.js"></script>
+  <script type="module" src="sidepanel.js"></script>
+</body>
+</html>

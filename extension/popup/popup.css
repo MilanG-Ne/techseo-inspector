@@ -1,0 +1,172 @@
+.popup-container {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  z-index: 10;
+}
+
+.header-actions {
+  display: flex;
+  gap: 4px;
+}
+
+.initial-state {
+  padding: 16px;
+}
+
+.initial-state .empty-state {
+  padding: 24px 16px 20px;
+}
+
+.loading-state {
+  padding: 16px;
+}
+
+.loading-state .score-section {
+  display: flex;
+  justify-content: center;
+  padding: 16px 0 20px;
+}
+
+.loading-state .module-list {
+  padding: 0;
+}
+
+.score-section {
+  display: flex;
+  justify-content: center;
+  padding: 16px 0 12px;
+}
+
+.module-list {
+  padding: 0 16px;
+}
+
+.module-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: var(--radius-xs);
+  transition: background var(--transition);
+  cursor: pointer;
+}
+
+.module-row:hover {
+  background: var(--bg-alt);
+}
+
+.module-row .module-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.module-row .module-icon.meta { background: var(--primary-bg); color: var(--primary); }
+.module-row .module-icon.headings { background: var(--success-bg); color: var(--success); }
+.module-row .module-icon.images { background: var(--warning-bg); color: var(--warning); }
+.module-row .module-icon.links { background: var(--primary-bg-strong); color: var(--primary); }
+.module-row .module-icon.schema { background: var(--success-bg-strong); color: var(--success); }
+.module-row .module-icon.indexability { background: var(--error-bg); color: var(--error); }
+.module-row .module-icon.performance { background: var(--warning-bg-strong); color: var(--warning); }
+
+.module-row .module-name {
+  flex: 1;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.module-row .module-chips {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.module-row .chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: var(--radius-pill);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.module-row .chip.pass-chip { background: var(--success-bg); color: var(--success); }
+.module-row .chip.warn-chip { background: var(--warning-bg); color: var(--warning); }
+.module-row .chip.fail-chip { background: var(--error-bg); color: var(--error); }
+
+.module-row .module-score {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  min-width: 32px;
+  text-align: right;
+}
+
+.popup-actions {
+  padding: 12px 16px 4px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.quick-actions {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px 4px;
+}
+
+.error-state {
+  padding: 16px;
+}
+
+.error-state .empty-state .empty-icon.error {
+  color: var(--error);
+}
+
+.popup-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-top: 1px solid var(--border);
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.popup-footer a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.popup-footer a:hover {
+  text-decoration: underline;
+}
+
+.popup-footer .separator {
+  color: var(--border);
+}

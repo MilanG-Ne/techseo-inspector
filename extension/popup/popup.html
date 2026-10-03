@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../shared/design-tokens.css">
+  <link rel="stylesheet" href="../shared/components.css">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <header class="popup-header">
+      <div class="logo">
+        <span class="logo-brand">iviG</span>
+        <span class="logo-sub">TechSEO</span>
+      </div>
+      <div class="header-actions">
+        <button id="btn-rerun" class="btn-icon" title="Re-run audit" style="display:none;"></button>
+      </div>
+    </header>
+
+    <div id="initial-state" class="initial-state">
+      <div class="empty-state">
+        <div class="empty-icon" id="initial-icon"></div>
+        <div class="empty-text">Analyze this page's SEO</div>
+        <div class="empty-sub">Check meta tags, headings, images, links, schema, and indexability</div>
+      </div>
+      <button id="btn-run" class="btn btn-primary full-width">Run SEO Audit</button>
+    </div>
+
+    <div id="loading-state" class="loading-state" style="display:none;">
+      <div class="score-section">
+        <div class="skeleton" style="width:120px;height:120px;border-radius:50%;"></div>
+      </div>
+      <div class="module-list">
+        <div class="skeleton" style="height:40px;margin-bottom:6px;"></div>
+        <div class="skeleton" style="height:40px;margin-bottom:6px;"></div>
+        <div class="skeleton" style="height:40px;margin-bottom:6px;"></div>
+        <div class="skeleton" style="height:40px;margin-bottom:6px;"></div>
+        <div class="skeleton" style="height:40px;margin-bottom:6px;"></div>
+        <div class="skeleton" style="height:40px;"></div>
+      </div>
+    </div>
+
+    <div id="results-state" style="display:none;">
+      <div id="score-section" class="score-section"></div>
+      <div id="module-summaries" class="module-list"></div>
+      <div class="popup-actions">
+        <button id="btn-panel" class="btn btn-primary full-width">Open Full Report</button>
+      </div>
+      <div class="quick-actions">
+        <button id="btn-copy" class="btn-icon" title="Copy summary"></button>
+        <button id="btn-snapshot" class="btn-icon" title="Save snapshot"></button>
+        <button id="btn-pdf" class="btn-icon" title="Download PDF"></button>
+      </div>
+    </div>
+
+    <div id="error-state" class="error-state" style="display:none;">
+      <div class="empty-state">
+        <div class="empty-icon error" id="error-icon"></div>
+        <div class="empty-text" id="error-text">Something went wrong</div>
+        <div class="empty-sub" id="error-detail"></div>
+      </div>
+      <button id="btn-retry" class="btn btn-secondary full-width">Try Again</button>
+    </div>
+
+    <footer class="popup-footer">
+      <span>by <strong>iviG</strong></span>
+      <span class="separator">|</span>
+      <a href="https://ivig.dev/?ref=techseo-inspector" target="_blank">Free SEO Audit</a>
+    </footer>
+  </div>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
