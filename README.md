@@ -116,4 +116,4 @@ Bug reports and pull requests are welcome. If a check gives a wrong result on a 
 
 MIT, see [LICENSE](LICENSE). Bundled third-party files (jsPDF and the Inter font) keep their own licenses, listed in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
-Built by [Milan Georgijevic](https://ivig.dev/) at iviG Technical SEO.
+Built by [Milan Georgijevic](https://ivig.dev/about/) at [iviG Technical SEO](https://ivig.dev/).
